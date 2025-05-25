@@ -1,0 +1,10 @@
+npm install react-router-dom react-icons
+
+npm install framer-motion
+
+npm install swiper@latest swiper-react@latest
+
+npm install react react-dom react-router-dom recharts @lottiefiles/react-lottie-player react-icons framer-motion
+
+
+npm install connect-history-api-fallback --save-dev

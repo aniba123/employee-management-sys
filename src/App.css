@@ -1,0 +1,62 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.app-container.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Navbar styling - ensure it stays on top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px; /* Fixed height */
+}
+
+/* Main content area - accounts for navbar height */
+.main-content {
+  display: flex;
+  flex: 1;
+  margin-top: 60px; /* Same as navbar height */
+}
+
+/* Sidebar positioning */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Starts below navbar */
+  left: 0;
+  bottom: 0;
+  z-index: 900; /* Below navbar but above content */
+}
+
+/* Page content - accounts for both navbar and sidebar */
+.page-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px; /* Same as sidebar width */
+  transition: margin-left 0.3s ease;
+}
+
+/* When sidebar is collapsed */
+.sidebar.collapsed ~ .page-content {
+  margin-left: 70px; /* Same as collapsed sidebar width */
+}
+
+/* Dark mode styles */
+.dark .page-content {
+  background-color: #1e1e1e;
+}
